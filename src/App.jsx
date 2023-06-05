@@ -10,7 +10,7 @@ function App() {
 
   useEffect(() => {
     if (text) {
-      fetch(`${api}anime?filter[text]=${text}`)
+      fetch(`${api}anime?filter[text]=${text}&page[limit]=12`)
         .then((response) => response.json())
         .then((response) => setInfo(response));
       }
