@@ -13,20 +13,20 @@ function App() {
       fetch(`${api}anime?filter[text]=${text}`)
         .then((response) => response.json())
         .then((response) => setInfo(response));
-        console.log(info.data);
       }
-
   }, [text]);
 
   return (
     <>
-
       <SearchInput value={text} onChange={(search) => setText(search)}/>
 
       {info.data && (
         <ul>
-          {info.data.map(item => <li key={item.id}>{item.attributes.canonicalTitle}</li> )}
-
+          {info.data.map(item =>
+          <li key={item.id}>
+            <img src={item.attributes.posterImage.small} alt="Anime image" />
+            {item.attributes.canonicalTitle}
+          </li>)}
         </ul>
       )}
     </>
