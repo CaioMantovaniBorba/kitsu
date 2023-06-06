@@ -13,7 +13,7 @@ const SearchInput = ({ value, onChange }) => {
 
   return (
     <>
-      <input type='search' value={displayValue} onChange={handleChange} />
+      <input type='search' value={displayValue} onChange={handleChange} placeholder='Enter anime name' />
     </>
   );
 };
