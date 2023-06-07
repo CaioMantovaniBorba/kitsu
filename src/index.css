@@ -40,6 +40,30 @@ ul img {
   max-width: 100%;
 }
 
+.pagination {
+  display: flex;
+  margin-top: 16px;
+}
+
+.pagination button {
+  padding: 2px 4px;
+}
+
+.pagination li + li {
+  margin-left: 1rem;
+}
+
+.pagination__item--active {
+  background: none;
+  font-weight: bold;
+  border: none;
+  color: #fff;
+}
+
+.pagination__item--active:focus {
+  outline: none;
+}
+
 /* Spinner */
 .loader {
   width: 48px;
